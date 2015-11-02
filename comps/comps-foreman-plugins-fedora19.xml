@@ -77,6 +77,7 @@
       <packagereq type="default">rubygem-less</packagereq>
       <packagereq type="default">rubygem-less-rails</packagereq>
       <packagereq type="default">rubygem-logify</packagereq>
+      <packagereq type="default">rubygem-mixlib-shellout</packagereq>
       <packagereq type="default">rubygem-newt</packagereq>
       <packagereq type="default">rubygem-opennebula</packagereq>
       <packagereq type="default">rubygem-openscap</packagereq>
@@ -144,6 +145,7 @@
       <packagereq type="default">rubygem-less-doc</packagereq>
       <packagereq type="default">rubygem-less-rails-doc</packagereq>
       <packagereq type="default">rubygem-logify-doc</packagereq>
+      <packagereq type="default">rubygem-mixlib-shellout-doc</packagereq>
       <packagereq type="default">rubygem-newt-doc</packagereq>
       <packagereq type="default">rubygem-opennebula-doc</packagereq>
       <packagereq type="default">rubygem-ovirt_provision_plugin-doc</packagereq>

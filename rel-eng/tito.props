@@ -244,6 +244,7 @@ whitelist = rubygem-algebrick
   rubygem-hammer_cli_foreman_tasks
   rubygem-less
   rubygem-less-rails
+  rubygem-mixlib-shellout
   rubygem-net-ssh-gateway
   rubygem-net-ssh-multi
   rubygem-ovirt_provision_plugin
@@ -329,6 +330,7 @@ whitelist = rubygem-algebrick
   rubygem-hammer_cli_foreman_tasks
   rubygem-less
   rubygem-less-rails
+  rubygem-mixlib-shellout
   rubygem-net-ssh-gateway
   rubygem-net-ssh-multi
   rubygem-ovirt_provision_plugin
@@ -424,6 +426,7 @@ whitelist = rubygem-algebrick
   rubygem-hammer_cli_foreman_tasks
   rubygem-less
   rubygem-less-rails
+  rubygem-mixlib-shellout
   rubygem-logify
   rubygem-ovirt_provision_plugin
   rubygem-puppetdb_foreman

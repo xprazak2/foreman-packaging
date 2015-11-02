@@ -82,6 +82,7 @@
       <packagereq type="default">tfm-rubygem-less-rails</packagereq>
       <packagereq type="default">tfm-rubygem-net-ssh-gateway</packagereq>
       <packagereq type="default">tfm-rubygem-net-ssh-multi</packagereq>
+      <packagereq type="default">tfm-rubygem-mixlib-shellout</packagereq>
       <packagereq type="default">tfm-rubygem-opennebula</packagereq>
       <packagereq type="default">tfm-rubygem-safe_yaml</packagereq>
       <packagereq type="default">tfm-rubygem-wicked</packagereq>
@@ -176,6 +177,7 @@
       <packagereq type="default">tfm-rubygem-jgrep-doc</packagereq>
       <packagereq type="default">tfm-rubygem-less-doc</packagereq>
       <packagereq type="default">tfm-rubygem-less-rails-doc</packagereq>
+      <packagereq type="default">tfm-rubygem-mixlib-shellout-doc</packagereq>
       <packagereq type="default">tfm-rubygem-net-ssh-gateway-doc</packagereq>
       <packagereq type="default">tfm-rubygem-net-ssh-multi-doc</packagereq>
       <packagereq type="default">tfm-rubygem-opennebula-doc</packagereq>
