@@ -214,6 +214,7 @@ whitelist = rubygem-algebrick
   rubygem-foreman_content
   rubygem-foreman_custom_parameters
   rubygem-foreman_default_hostgroup
+  rubygem-foreman_deployments
   rubygem-foreman_dhcp_browser
   rubygem-foreman_digitalocean
   rubygem-foreman_discovery
@@ -248,6 +249,7 @@ whitelist = rubygem-algebrick
   rubygem-net-ssh-multi
   rubygem-ovirt_provision_plugin
   rubygem-puppetdb_foreman
+  rubygem-safe_yaml
   rubygem-wicked
   rubygem-zscheduler
 
@@ -294,6 +296,7 @@ whitelist = rubygem-algebrick
   rubygem-foreman_content
   rubygem-foreman_custom_parameters
   rubygem-foreman_default_hostgroup
+  rubygem-foreman_deployments
   rubygem-foreman_dhcp_browser
   rubygem-foreman_digitalocean
   rubygem-foreman_discovery
@@ -329,6 +332,7 @@ whitelist = rubygem-algebrick
   rubygem-net-ssh-multi
   rubygem-ovirt_provision_plugin
   rubygem-puppetdb_foreman
+  rubygem-safe_yaml
   rubygem-wicked
   rubygem-zscheduler
 
