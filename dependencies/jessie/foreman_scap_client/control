@@ -1,0 +1,16 @@
+Source: ruby-dynflow
+Section: ruby
+Priority: optional
+Maintainer: ForemanOpenscap Team
+Uploaders: ForemanOpenscap Team
+DM-Upload-Allowed: yes
+Build-Depends: debhelper, gem2deb
+Standards-Version: 3.9.3
+XS-Ruby-Versions: all
+
+Package: ruby-foreman-scap-client
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${shlibs:Depends}, ${misc:Depends}, ruby | ruby-interpreter
+Suggests: doc-base
+Description: Scap client for foreman_openscap
