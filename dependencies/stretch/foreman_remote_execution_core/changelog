@@ -1,3 +1,9 @@
+ruby-foreman-remote-execution-core (1.4.5-1) stable; urgency=low
+
+  * 1.4.5 released
+
+ -- Ondrej Prazak <oprazak@redhat.com>  Wed, 28 Feb 2018 09:15:47 +0000
+
 ruby-foreman-remote-execution-core (1.1.0-1) stable; urgency=low
 
   * 1.1.0 released

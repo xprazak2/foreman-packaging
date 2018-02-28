@@ -1,3 +1,9 @@
+ruby-hammer-cli-foreman-remote-execution (1.4.5-1) stable; urgency=low
+
+  * 1.4.5 released
+
+ -- Ondrej Prazak <oprazak@redhat.com>  Wed, 28 Feb 2018 09:15:47 +0000
+
 ruby-hammer-cli-foreman-remote-execution (0.0.6-1) stable; urgency=low
 
   * 0.0.6 released
