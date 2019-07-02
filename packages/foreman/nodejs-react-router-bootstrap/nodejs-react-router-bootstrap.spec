@@ -1,45 +1,67 @@
 %global npm_name react-router-bootstrap
-%global enable_tests 1
 
-Name: nodejs-%{npm_name}
+Name: nodejs-react-router-bootstrap
 Version: 0.24.4
-Release: 2%{?dist}
+Release: 1%{?dist}
 Summary: Integration between React Router and React-Bootstrap
-License: ASL 2.0
+License: Apache-2.0
 Group: Development/Libraries
 URL: https://github.com/react-bootstrap/react-router-bootstrap
-Source0: https://registry.npmjs.org/%{npm_name}/-/%{npm_name}-%{version}.tgz
+Source0: https://registry.npmjs.org/react-router-bootstrap/-/react-router-bootstrap-0.24.4.tgz
+Source1: https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz
+Source2: https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz
+Source3: https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz
+Source4: https://registry.npmjs.org/react-is/-/react-is-16.8.6.tgz
+Source5: https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz
+Source6: %{name}-%{version}-registry.npmjs.org.tgz
 BuildRequires: nodejs-packaging
-Requires: npm(prop-types) >= 15.5.10
-Requires: npm(prop-types) < 16.0.0
 BuildArch: noarch
 ExclusiveArch: %{nodejs_arches} noarch
+
+Provides: npm(%{npm_name}) = %{version}
+Provides: bundled(npm(js-tokens)) = 4.0.0
+Provides: bundled(npm(loose-envify)) = 1.4.0
+Provides: bundled(npm(object-assign)) = 4.1.1
+Provides: bundled(npm(prop-types)) = 15.7.2
+Provides: bundled(npm(react-is)) = 16.8.6
+Provides: bundled(npm(react-router-bootstrap)) = 0.24.4
+AutoReq: no
+AutoProv: no
+
+%define npm_cache_dir /tmp/npm_cache_%{name}-%{version}-%{release}
 
 %description
 %{summary}
 
 %prep
-%setup -q -n package
+mkdir -p %{npm_cache_dir}
+for tgz in %{sources}; do
+  echo $tgz | grep -q registry.npmjs.org || npm cache add --cache %{npm_cache_dir} $tgz
+done
+%setup -T -q -a 6 -D -n %{npm_cache_dir}
+
+%build
+npm install --cache-min Infinity --cache %{npm_cache_dir} --no-shrinkwrap --no-optional --global-style true %{npm_name}@%{version}
 
 %install
 mkdir -p %{buildroot}%{nodejs_sitelib}/%{npm_name}
-cp -pfr lib %{buildroot}%{nodejs_sitelib}/%{npm_name}
-cp -pfr package.json %{buildroot}%{nodejs_sitelib}/%{npm_name}
+cp -pfr node_modules/%{npm_name}/node_modules %{buildroot}%{nodejs_sitelib}/%{npm_name}
+cp -pfr node_modules/%{npm_name}/lib %{buildroot}%{nodejs_sitelib}/%{npm_name}
+cp -pfr node_modules/%{npm_name}/package.json %{buildroot}%{nodejs_sitelib}/%{npm_name}
 
-%nodejs_symlink_deps
-
-%if 0%{?enable_tests}
-%check
-%{nodejs_symlink_deps} --check
-%endif
+%clean
+rm -rf %{buildroot} %{npm_cache_dir}
 
 %files
 %{nodejs_sitelib}/%{npm_name}
-%license LICENSE
-%doc CHANGELOG.md
-%doc README.md
+%license node_modules/%{npm_name}/LICENSE
+%doc node_modules/%{npm_name}/CHANGELOG.md
+%doc node_modules/%{npm_name}/README.md
 
 %changelog
+* Tue Jul 02 2019 vagrant 0.24.4-1
+- Update to 0.24.4
+
 * Wed Sep 12 2018 Bryan Kearney <bryan.kearney@gmail.com> - 0.24.4-2
 - Use ASL 2.0 instead of Apache 2.0 or Apache-2.0
 
